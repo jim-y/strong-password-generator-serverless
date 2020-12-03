@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head lang='en'>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width'>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="bundle.css">
+	<title>Generate a 💪 password</title>
+</head>
+<body>
+	<section class="main section">
+    <div class="container">
+			<div class="control is-large has-icons-right">
+				<input type="text" class="input is-large is-focused" />
+				<span class="icon is-medium is-right copy is-clickable" data-clipboard-target="input.input">
+					<i class="fas fa-copy"></i>
+				</span>
+				<span class="icon is-medium is-right sync is-clickable">
+					<i class="fas fa-sync-alt"></i>
+				</span>
+			</div>
+			<div class="options control is-relative mt-1">
+				<aside class="trigger is-unselectable is-flex is-justify-content-flex-end is-align-items-center is-clickable">
+					<span class="is-size-6 has-text-weight-semibold">options</span>
+					<span class="icon">
+						<i class="caret fas fa-caret-down"></i>
+					</span>
+				</aside>
+				<section class="settings section has-background-light is-hidden">
+					<div class="container">
+						<div class="field pb-2">
+							<div class="columns">
+								<div class="control column is-10">
+									<span class="is-size-5">Password length</span>
+								</div>
+								<div class="control column">
+									<input type="number" class="inp-pwd-length input is-small" />
+								</div>
+							</div>
+						</div>
+
+						<div class="field">
+							<label class="checkbox">
+								<input type="checkbox" data-id="upper"/>
+								<span class="is-size-6">Uppercase</span>
+							</label>
+						</div>
+
+						<div class="field">
+							<label class="checkbox">
+								<input type="checkbox" data-id="lower"/>
+								<span class="is-size-6">Lowercase</span>
+							</label>
+						</div>
+
+						<div class="field">
+							<label class="checkbox">
+								<input type="checkbox" data-id="numbers"/>
+								<span class="is-size-6">Numbers</span>
+							</label>
+						</div>
+
+						<div class="field">
+							<label class="checkbox">
+								<input type="checkbox" data-id="symbols"/>
+								<span class="is-size-6">Symbols</span>
+							</label>
+						</div>
+
+						<div class="field pt-4">
+							<button class="generate button is-primary is-fullwidth">Generate</button>
+						</div>
+
+						<div class="field">
+							<button class="history button is-primary is-outlined is-fullwidth">Show history</button>
+						</div>
+
+						<div class="field history-container is-hidden pt-4"></div>
+					</div>
+				</section>
+			</div>
+    </div>
+	</section>
+	<template id="historyItem">
+		<div class="block is-flex is-flex-direction-column">
+			<span class="_date is-size-7"></span>
+			<code class="_pwd is-size-5 pl-0"></code>
+		</div>
+	</template>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+	<script src='bundle.js'></script>
+</body>
+</html>

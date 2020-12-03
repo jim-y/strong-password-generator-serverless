@@ -1,0 +1,36 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section.main {
+  margin-top: calc(100vh * 0.2);
+  width: 500px;
+}
+
+.control.has-icons-right .input.is-focused {
+  padding-right: 5em;
+}
+
+.control.has-icons-right .icon.is-right.copy {
+  right: 60px;
+}
+
+.control.has-icons-right .icon.is-right.is-clickable {
+  pointer-events: initial;
+}
+
+.options .settings {
+  border-radius: .25rem;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+}
+
+.options .trigger {
+  position: absolute;
+  right: 0;
+}

@@ -1,20 +1,25 @@
 {
   "name": "strong-password-generator",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.1",
-    "@rollup/plugin-node-resolve": "^7.0.0",
-    "npm-run-all": "^4.1.5",
-    "rollup": "^1.16.2",
-    "rollup-plugin-terser": "^5.0.0",
-    "serve": "^11.0.2"
-  },
-  "dependencies": {
-    "date-fns": "^1.30.1"
-  },
+  "version": "1.0.0",
+  "description": "",
   "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "dev": "npm-run-all --parallel start watch",
-    "start": "serve public"
+    "start": "scripty",
+    "start:client": "cd client && npm run watch",
+    "start:backend": "cd backend && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jim-y/strong-password-generator.git"
+  },
+  "keywords": [],
+  "author": "Attila Kling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jim-y/strong-password-generator/issues"
+  },
+  "homepage": "https://github.com/jim-y/strong-password-generator#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "scripty": "^2.0.0"
   }
 }
