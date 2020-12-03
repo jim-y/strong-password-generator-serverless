@@ -1,25 +1,40 @@
 {
-  "name": "strong-password-generator",
+  "name": "strong-password-generator-serverless",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "scripty",
-    "start:client": "cd client && npm run watch",
-    "start:backend": "cd backend && npm run start"
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "npm-run-all --parallel start watch",
+    "start": "serve public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jim-y/strong-password-generator.git"
+    "url": "git+https://github.com/jim-y/strong-password-generator-serverless.git"
   },
   "keywords": [],
   "author": "Attila Kling",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jim-y/strong-password-generator/issues"
+    "url": "https://github.com/jim-y/strong-password-generator-serverless/issues"
   },
-  "homepage": "https://github.com/jim-y/strong-password-generator#readme",
+  "homepage": "https://github.com/jim-y/strong-password-generator-serverless#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bulma": "^0.9.1",
+    "cookie": "^0.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "randomatic": "^3.1.1",
+    "tippy.js": "^6.2.7"
+  },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
-    "scripty": "^2.0.0"
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup": "^1.16.2",
+    "rollup-plugin-css-only": "^3.0.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^5.0.0",
+    "serve": "^11.0.2"
   }
 }

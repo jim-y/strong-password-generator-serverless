@@ -3,7 +3,10 @@ node_modules
 package-lock.json
 
 # client
-client/public/bundle*
+public/bundle*
 
 .env
 .env.local
+
+# Local Netlify folder
+.netlify

@@ -8,7 +8,7 @@ export function generate() {
       _buildOptions()
     )
   );
-  return fetch(`/api/generate?${qs}`, {
+  return fetch(`/.netlify/functions/generate?${qs}`, {
     credentials: 'same-origin'
   })
     .then(res => res.text())
@@ -33,5 +33,5 @@ function _buildOptions() {
 }
 
 export function getHistory() {
-  return fetch('/api/history').then(r => r.json());
+  return fetch('/.netlify/functions/history').then(r => r.json());
 }
