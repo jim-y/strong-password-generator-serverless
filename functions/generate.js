@@ -53,12 +53,14 @@ exports.handler = async function(event, context) {
 
   const token = jwt.sign(
     { passwords: pastPasswords.slice(0, 5) },
-    process.env.JWT_SECRET
+    process.env.JWT_SECRET,
+    { expiresIn: '1y' }
   );
 
   var setCookie = cookie.serialize('jwt', token, {
     httpOnly: true,
-    secure: process.env.NETLIFY_DEV !== "true"
+    secure: process.env.NETLIFY_DEV !== "true",
+    maxAge: 31557600 // year in seconds
   });
 
   return {
