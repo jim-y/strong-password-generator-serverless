@@ -17,3 +17,9 @@
   # to deploy to AWS. This is relative to the base directory if one has been set, 
   # or the root directory if a base has not been set.
   functions = "functions"
+
+[dev]
+  command = "npm run dev"
+  port = 8888
+  targetPort = 5000
+  framework = "#custom"

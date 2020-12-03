@@ -6,7 +6,7 @@ import './main.css';
 import './icons';
 import './options';
 
-import { generate } from './functions';
+import { generate, emitter, getHistory } from './functions';
 
 generate();
-
+emitter.on('password', getHistory);

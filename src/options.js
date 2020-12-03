@@ -6,10 +6,9 @@ import {
   checkboxes,
   generateBtn,
   historyBtn,
-  historyContainer,
-  template
+  historyContainer
 } from './elements';
-import { generate, getHistory } from './functions';
+import { generate } from './functions';
 
 // Trigger
 trigger.addEventListener('mouseenter', (e) => {
@@ -38,25 +37,5 @@ for (const checkbox of checkboxes) {
 generateBtn.addEventListener('click', generate);
 
 historyBtn.addEventListener('click', () => {
-  if (!historyContainer.classList.contains('is-hidden')) {
-    historyContainer.classList.add('is-hidden');
-    return;
-  }
-
-  getHistory().then(history => {
-    while (historyContainer.firstChild) {
-      historyContainer.removeChild(historyContainer.lastChild);
-    }
-    
-    historyContainer.classList.remove('is-hidden');
-
-    for (const item of history) {
-      const clone = template.content.cloneNode(true);
-      const date = clone.querySelector('._date');
-      const pwd = clone.querySelector('._pwd');
-      date.textContent = item.date;
-      pwd.textContent = item.pwd;
-      historyContainer.appendChild(clone);
-    }
-  })
-})
+  historyContainer.classList.toggle('is-hidden');
+});
